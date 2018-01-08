@@ -1,3 +1,6 @@
 [submodule "app/assets/styles"]
 	path = app/assets/styles
 	url = https://github.com/PixelaGt/simple-layout
+[submodule "app/components/prismic"]
+	path = app/components/prismic
+	url = https://github.com/PixelaGt/prismic-vue

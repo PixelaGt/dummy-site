@@ -1,14 +1,17 @@
 const path = require('path');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const nuxtConf = {
   srcDir: 'app/',
   build: {
-    vendor: ['prismic-javascript', 'prismic-dom', 'lodash'],
+    plugins: [
+      new StylelintPlugin()
+    ],
+    vendor: ['lodash'],
     extend (config, ctx) {
      // Excludes /assets/svg from url-loader
      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
      urlLoader.exclude = [/assets\/svg/];
-
      // Includes /assets/svg for svg-sprite-loader
      config.module.rules.push({
        test: /\.svg$/,
@@ -28,12 +31,10 @@ const nuxtConf = {
 
   css: [
     'normalize.css',
-    '@/assets/styles/icons.scss',
+    '@/assets/styles/index.scss',
   ],
 
   plugins: [
-    { src: '~/plugins/events.js', ssr: false },
-    { src: '~/plugins/artists.js', ssr: false },
   ]
 }
 

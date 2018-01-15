@@ -19,6 +19,10 @@
 <script>
 import Logo from '~/components/Logo.vue'
 
+import { CMS } from '@pixela/prismic-vue';
+
+const cms = new CMS('https://dummy-site.prismic.io/api');
+
 export default {
   components: {
     Logo

@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@pixela/prismic-vue": "0.0.2",
+    "@pixela/prismic-vue": "0.0.4",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0",
     "nuxt": "^1.0.0-rc11"
